@@ -1,0 +1,290 @@
+\hypertarget{classcontainers_1_1_common_iterator}{}\doxysection{containers\+::Common\+Iterator$<$ T, Is\+Const $>$ Class Template Reference}
+\label{classcontainers_1_1_common_iterator}\index{containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}}
+
+
+{\ttfamily \#include $<$vector.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_abba047b481c4d052085b71b0c4563127}\label{classcontainers_1_1_common_iterator_abba047b481c4d052085b71b0c4563127}} 
+using {\bfseries value\+\_\+type} = T
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_a0058c5b15a5f6610ed9085303ddeeb10}\label{classcontainers_1_1_common_iterator_a0058c5b15a5f6610ed9085303ddeeb10}} 
+using {\bfseries reference} = T \&
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_a950113b9649b563c1037879914f335f8}\label{classcontainers_1_1_common_iterator_a950113b9649b563c1037879914f335f8}} 
+using {\bfseries const\+\_\+reference} = const T \&
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_ade1402bf8db0814cc8723d2b7e918e02}\label{classcontainers_1_1_common_iterator_ade1402bf8db0814cc8723d2b7e918e02}} 
+using {\bfseries pointer} = T $\ast$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_aa9f42f5fc19bf63b6913638e87a6b9e2}\label{classcontainers_1_1_common_iterator_aa9f42f5fc19bf63b6913638e87a6b9e2}} 
+using {\bfseries const\+\_\+pointer} = const T $\ast$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_a1d53da9a7df08b3324df259577c335ef}\label{classcontainers_1_1_common_iterator_a1d53da9a7df08b3324df259577c335ef}} 
+using {\bfseries size\+\_\+type} = size\+\_\+t
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_a6d4c3910c9b4b25c8545a8e4e3e75f6c}\label{classcontainers_1_1_common_iterator_a6d4c3910c9b4b25c8545a8e4e3e75f6c}} 
+using {\bfseries conditional\+\_\+ptr} = std\+::conditional\+\_\+t$<$ Is\+Const, const\+\_\+pointer, pointer $>$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_aa8df54c26b623bd3046c4e4015ce552b}\label{classcontainers_1_1_common_iterator_aa8df54c26b623bd3046c4e4015ce552b}} 
+using {\bfseries conditional\+\_\+ref} = std\+::conditional\+\_\+t$<$ Is\+Const, const\+\_\+reference, reference $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcontainers_1_1_common_iterator_a3f0dbe9070f01bc9a5e0cc7f0d0b276a}{Common\+Iterator}} () noexcept
+\item 
+\mbox{\hyperlink{classcontainers_1_1_common_iterator_ae1aceed1a97c5dc46e50f9c30c65b359}{Common\+Iterator}} (pointer current)
+\item 
+conditional\+\_\+ref \mbox{\hyperlink{classcontainers_1_1_common_iterator_a6bbb07daa39abdc7b00a92bbddccd30b}{operator+}} (int n)
+\item 
+conditional\+\_\+ref \mbox{\hyperlink{classcontainers_1_1_common_iterator_a603476fac0af2ce18497d71ae125b047}{operator-\/}} (int n)
+\item 
+conditional\+\_\+ref \mbox{\hyperlink{classcontainers_1_1_common_iterator_a2d66bcee14877d869fc7e5d380ba729f}{operator++}} (int)
+\item 
+conditional\+\_\+ref \mbox{\hyperlink{classcontainers_1_1_common_iterator_a89106dbdad72164b49f19f5bb4c44287}{operator-\/-\/}} (int)
+\item 
+conditional\+\_\+ref \mbox{\hyperlink{classcontainers_1_1_common_iterator_ac68c339446e904c01059afdc9be5be59}{operator++}} ()
+\item 
+conditional\+\_\+ref \mbox{\hyperlink{classcontainers_1_1_common_iterator_ae3ef51a2970d6879e373fb7dbf42c9df}{operator-\/-\/}} ()
+\item 
+bool \mbox{\hyperlink{classcontainers_1_1_common_iterator_a7131f2b5863d9d838e175965bd880266}{operator$<$=}} (const \mbox{\hyperlink{classcontainers_1_1_common_iterator}{Common\+Iterator}} \&other) const
+\item 
+bool \mbox{\hyperlink{classcontainers_1_1_common_iterator_a22dd44c5a3b2b8c16c798b2711463300}{operator$>$=}} (const \mbox{\hyperlink{classcontainers_1_1_common_iterator}{Common\+Iterator}} \&other) const
+\item 
+bool \mbox{\hyperlink{classcontainers_1_1_common_iterator_ae7c757d15406b39d16cbc46b8096fd60}{operator$<$}} (const \mbox{\hyperlink{classcontainers_1_1_common_iterator}{Common\+Iterator}} \&other) const
+\item 
+bool \mbox{\hyperlink{classcontainers_1_1_common_iterator_a4b21c318f3d1fb3e79b28b2f230ebf58}{operator$>$}} (const \mbox{\hyperlink{classcontainers_1_1_common_iterator}{Common\+Iterator}} \&other) const
+\item 
+bool \mbox{\hyperlink{classcontainers_1_1_common_iterator_ab70c10d7da50fcd2f5395c90af1d3338}{operator!=}} (const \mbox{\hyperlink{classcontainers_1_1_common_iterator}{Common\+Iterator}} \&other) const
+\item 
+bool \mbox{\hyperlink{classcontainers_1_1_common_iterator_a3055d8e0a0fcc14d748880567403d669}{operator==}} (const \mbox{\hyperlink{classcontainers_1_1_common_iterator}{Common\+Iterator}} \&other) const
+\item 
+conditional\+\_\+ref \mbox{\hyperlink{classcontainers_1_1_common_iterator_a46f0b9ceb8cc4b429224f0d897c34233}{operator$\ast$}} () const
+\item 
+conditional\+\_\+ptr \mbox{\hyperlink{classcontainers_1_1_common_iterator_afa1388001348560dbd55a6c3c528b078}{operator-\/$>$}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_a07857ea092bfd5d08a811e05ad544204}\label{classcontainers_1_1_common_iterator_a07857ea092bfd5d08a811e05ad544204}} 
+class {\bfseries Vector$<$ T $>$}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, bool Is\+Const$>$\newline
+class containers\+::\+Common\+Iterator$<$ T, Is\+Const $>$}
+
+Определение шаблоного класса итератора ветора. Первый параметр -\/ тип данных, второй параметр -\/ значение типа данных bool для опеределения итератора -\/ const он или нет 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_a3f0dbe9070f01bc9a5e0cc7f0d0b276a}\label{classcontainers_1_1_common_iterator_a3f0dbe9070f01bc9a5e0cc7f0d0b276a}} 
+\index{containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}!CommonIterator@{CommonIterator}}
+\index{CommonIterator@{CommonIterator}!containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{CommonIterator()}{CommonIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , bool Is\+Const$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_common_iterator}{containers\+::\+Common\+Iterator}}$<$ T, Is\+Const $>$\+::\mbox{\hyperlink{classcontainers_1_1_common_iterator}{Common\+Iterator}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Конструктор итератора по умолчанию \mbox{\Hypertarget{classcontainers_1_1_common_iterator_ae1aceed1a97c5dc46e50f9c30c65b359}\label{classcontainers_1_1_common_iterator_ae1aceed1a97c5dc46e50f9c30c65b359}} 
+\index{containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}!CommonIterator@{CommonIterator}}
+\index{CommonIterator@{CommonIterator}!containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{CommonIterator()}{CommonIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , bool Is\+Const$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_common_iterator}{containers\+::\+Common\+Iterator}}$<$ T, Is\+Const $>$\+::\mbox{\hyperlink{classcontainers_1_1_common_iterator}{Common\+Iterator}} (\begin{DoxyParamCaption}\item[{pointer}]{current }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Параметризованный конструктор 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em current} & указатель на данные \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_ab70c10d7da50fcd2f5395c90af1d3338}\label{classcontainers_1_1_common_iterator_ab70c10d7da50fcd2f5395c90af1d3338}} 
+\index{containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename T , bool Is\+Const$>$ \\
+bool \mbox{\hyperlink{classcontainers_1_1_common_iterator}{containers\+::\+Common\+Iterator}}$<$ T, Is\+Const $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcontainers_1_1_common_iterator}{Common\+Iterator}}$<$ T, Is\+Const $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора != 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em other} & другой итератор вектора для сравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+проверка на равенство данных 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_a46f0b9ceb8cc4b429224f0d897c34233}\label{classcontainers_1_1_common_iterator_a46f0b9ceb8cc4b429224f0d897c34233}} 
+\index{containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename T , bool Is\+Const$>$ \\
+conditional\+\_\+ref \mbox{\hyperlink{classcontainers_1_1_common_iterator}{containers\+::\+Common\+Iterator}}$<$ T, Is\+Const $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора $\ast$ \begin{DoxyReturn}{Returns}
+значение данных вектора 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_a6bbb07daa39abdc7b00a92bbddccd30b}\label{classcontainers_1_1_common_iterator_a6bbb07daa39abdc7b00a92bbddccd30b}} 
+\index{containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$typename T , bool Is\+Const$>$ \\
+conditional\+\_\+ref \mbox{\hyperlink{classcontainers_1_1_common_iterator}{containers\+::\+Common\+Iterator}}$<$ T, Is\+Const $>$\+::operator+ (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора + 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n} & значение для прибавления к текущему \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ссылка на новое значение 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_ac68c339446e904c01059afdc9be5be59}\label{classcontainers_1_1_common_iterator_ac68c339446e904c01059afdc9be5be59}} 
+\index{containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , bool Is\+Const$>$ \\
+conditional\+\_\+ref \mbox{\hyperlink{classcontainers_1_1_common_iterator}{containers\+::\+Common\+Iterator}}$<$ T, Is\+Const $>$\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора ++ \begin{DoxyReturn}{Returns}
+$\ast$this 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_a2d66bcee14877d869fc7e5d380ba729f}\label{classcontainers_1_1_common_iterator_a2d66bcee14877d869fc7e5d380ba729f}} 
+\index{containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , bool Is\+Const$>$ \\
+conditional\+\_\+ref \mbox{\hyperlink{classcontainers_1_1_common_iterator}{containers\+::\+Common\+Iterator}}$<$ T, Is\+Const $>$\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора ++ \begin{DoxyReturn}{Returns}
+$\ast$this 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_a603476fac0af2ce18497d71ae125b047}\label{classcontainers_1_1_common_iterator_a603476fac0af2ce18497d71ae125b047}} 
+\index{containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$typename T , bool Is\+Const$>$ \\
+conditional\+\_\+ref \mbox{\hyperlink{classcontainers_1_1_common_iterator}{containers\+::\+Common\+Iterator}}$<$ T, Is\+Const $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора -\/ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n} & значение для вычитания из текущего значения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ссылка на новое значение 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_ae3ef51a2970d6879e373fb7dbf42c9df}\label{classcontainers_1_1_common_iterator_ae3ef51a2970d6879e373fb7dbf42c9df}} 
+\index{containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , bool Is\+Const$>$ \\
+conditional\+\_\+ref \mbox{\hyperlink{classcontainers_1_1_common_iterator}{containers\+::\+Common\+Iterator}}$<$ T, Is\+Const $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора -- \begin{DoxyReturn}{Returns}
+$\ast$this 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_a89106dbdad72164b49f19f5bb4c44287}\label{classcontainers_1_1_common_iterator_a89106dbdad72164b49f19f5bb4c44287}} 
+\index{containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , bool Is\+Const$>$ \\
+conditional\+\_\+ref \mbox{\hyperlink{classcontainers_1_1_common_iterator}{containers\+::\+Common\+Iterator}}$<$ T, Is\+Const $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора -- \begin{DoxyReturn}{Returns}
+$\ast$this 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_afa1388001348560dbd55a6c3c528b078}\label{classcontainers_1_1_common_iterator_afa1388001348560dbd55a6c3c528b078}} 
+\index{containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily template$<$typename T , bool Is\+Const$>$ \\
+conditional\+\_\+ptr \mbox{\hyperlink{classcontainers_1_1_common_iterator}{containers\+::\+Common\+Iterator}}$<$ T, Is\+Const $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора -\/$>$ \begin{DoxyReturn}{Returns}
+значение данных вектора 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_ae7c757d15406b39d16cbc46b8096fd60}\label{classcontainers_1_1_common_iterator_ae7c757d15406b39d16cbc46b8096fd60}} 
+\index{containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily template$<$typename T , bool Is\+Const$>$ \\
+bool \mbox{\hyperlink{classcontainers_1_1_common_iterator}{containers\+::\+Common\+Iterator}}$<$ T, Is\+Const $>$\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcontainers_1_1_common_iterator}{Common\+Iterator}}$<$ T, Is\+Const $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора $<$ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em other} & другой итератор вектора для сравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+проверка на $<$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_a7131f2b5863d9d838e175965bd880266}\label{classcontainers_1_1_common_iterator_a7131f2b5863d9d838e175965bd880266}} 
+\index{containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily template$<$typename T , bool Is\+Const$>$ \\
+bool \mbox{\hyperlink{classcontainers_1_1_common_iterator}{containers\+::\+Common\+Iterator}}$<$ T, Is\+Const $>$\+::operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcontainers_1_1_common_iterator}{Common\+Iterator}}$<$ T, Is\+Const $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора $<$= 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em other} & другой итератор вектора для сравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+проверка на $<$= 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_a3055d8e0a0fcc14d748880567403d669}\label{classcontainers_1_1_common_iterator_a3055d8e0a0fcc14d748880567403d669}} 
+\index{containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T , bool Is\+Const$>$ \\
+bool \mbox{\hyperlink{classcontainers_1_1_common_iterator}{containers\+::\+Common\+Iterator}}$<$ T, Is\+Const $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcontainers_1_1_common_iterator}{Common\+Iterator}}$<$ T, Is\+Const $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора == 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em other} & другой итератор вектора для сравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+проверка на равенство данных 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_a4b21c318f3d1fb3e79b28b2f230ebf58}\label{classcontainers_1_1_common_iterator_a4b21c318f3d1fb3e79b28b2f230ebf58}} 
+\index{containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily template$<$typename T , bool Is\+Const$>$ \\
+bool \mbox{\hyperlink{classcontainers_1_1_common_iterator}{containers\+::\+Common\+Iterator}}$<$ T, Is\+Const $>$\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcontainers_1_1_common_iterator}{Common\+Iterator}}$<$ T, Is\+Const $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора $>$ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em other} & другой итератор вектора для сравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+проверка на $>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_common_iterator_a22dd44c5a3b2b8c16c798b2711463300}\label{classcontainers_1_1_common_iterator_a22dd44c5a3b2b8c16c798b2711463300}} 
+\index{containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!containers::CommonIterator$<$ T, IsConst $>$@{containers::CommonIterator$<$ T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily template$<$typename T , bool Is\+Const$>$ \\
+bool \mbox{\hyperlink{classcontainers_1_1_common_iterator}{containers\+::\+Common\+Iterator}}$<$ T, Is\+Const $>$\+::operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcontainers_1_1_common_iterator}{Common\+Iterator}}$<$ T, Is\+Const $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора $>$= 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em other} & другой итератор вектора для сравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+проверка на $>$= 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vector_8h}{vector.\+h}}\end{DoxyCompactItemize}

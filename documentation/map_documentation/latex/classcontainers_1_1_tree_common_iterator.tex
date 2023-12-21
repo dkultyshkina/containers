@@ -1,0 +1,234 @@
+\hypertarget{classcontainers_1_1_tree_common_iterator}{}\doxysection{containers\+::Tree\+Common\+Iterator$<$ Key, T, Is\+Const $>$ Class Template Reference}
+\label{classcontainers_1_1_tree_common_iterator}\index{containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}}
+
+
+{\ttfamily \#include $<$rbtree.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a4bc077e15daba0dc051d24e3e0dc806f}\label{classcontainers_1_1_tree_common_iterator_a4bc077e15daba0dc051d24e3e0dc806f}} 
+using {\bfseries key\+\_\+type} = Key
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_aacd9b120429961b36953335210b758bc}\label{classcontainers_1_1_tree_common_iterator_aacd9b120429961b36953335210b758bc}} 
+using {\bfseries mapped\+\_\+type} = T
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a7dac58b9c7d69ffb76f01f67bd9cdcca}\label{classcontainers_1_1_tree_common_iterator_a7dac58b9c7d69ffb76f01f67bd9cdcca}} 
+using {\bfseries value\+\_\+type} = std\+::pair$<$ const Key, T $>$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_aa785a4c6cba14621d7d1de6a8fc369b1}\label{classcontainers_1_1_tree_common_iterator_aa785a4c6cba14621d7d1de6a8fc369b1}} 
+using {\bfseries node\+\_\+type} = \mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$ key\+\_\+type, mapped\+\_\+type $>$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a95501f0e68b4c97f8300d03c3f41d4fb}\label{classcontainers_1_1_tree_common_iterator_a95501f0e68b4c97f8300d03c3f41d4fb}} 
+using {\bfseries reference} = \mbox{\hyperlink{classcontainers_1_1_node}{node\+\_\+type}} \&
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a3f118dcaf58bba32306302f6f0c496a6}\label{classcontainers_1_1_tree_common_iterator_a3f118dcaf58bba32306302f6f0c496a6}} 
+using {\bfseries const\+\_\+reference} = const \mbox{\hyperlink{classcontainers_1_1_node}{node\+\_\+type}} \&
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a264e7acfa449093636163983b50f2248}\label{classcontainers_1_1_tree_common_iterator_a264e7acfa449093636163983b50f2248}} 
+using {\bfseries pointer} = \mbox{\hyperlink{classcontainers_1_1_node}{node\+\_\+type}} $\ast$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a3e7c0f0ca8183fdce9bfc3c56e089e4c}\label{classcontainers_1_1_tree_common_iterator_a3e7c0f0ca8183fdce9bfc3c56e089e4c}} 
+using {\bfseries const\+\_\+pointer} = const \mbox{\hyperlink{classcontainers_1_1_node}{node\+\_\+type}} $\ast$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_ae4f3aeafcf4b4e9c61a15b6b951de8d3}\label{classcontainers_1_1_tree_common_iterator_ae4f3aeafcf4b4e9c61a15b6b951de8d3}} 
+using {\bfseries conditional\+\_\+node\+\_\+ptr} = std\+::conditional\+\_\+t$<$ Is\+Const, \mbox{\hyperlink{classcontainers_1_1_node}{const\+\_\+pointer}}, \mbox{\hyperlink{classcontainers_1_1_node}{pointer}} $>$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a4a94efe26d05145a6c8e7325858cef5d}\label{classcontainers_1_1_tree_common_iterator_a4a94efe26d05145a6c8e7325858cef5d}} 
+using {\bfseries conditional\+\_\+node\+\_\+ref} = std\+::conditional\+\_\+t$<$ Is\+Const, \mbox{\hyperlink{classcontainers_1_1_node}{const\+\_\+reference}}, \mbox{\hyperlink{classcontainers_1_1_node}{reference}} $>$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a8adadeb203bb57a45d583e45b11d6ea8}\label{classcontainers_1_1_tree_common_iterator_a8adadeb203bb57a45d583e45b11d6ea8}} 
+using {\bfseries tree\+\_\+type} = \mbox{\hyperlink{classcontainers_1_1_tree}{Tree}}$<$ key\+\_\+type, mapped\+\_\+type $>$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a8321150024394b3a5a95d623b1cc871c}\label{classcontainers_1_1_tree_common_iterator_a8321150024394b3a5a95d623b1cc871c}} 
+using {\bfseries tree\+\_\+reference} = \mbox{\hyperlink{classcontainers_1_1_tree}{tree\+\_\+type}} \&
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a9db0b07c5b73b91b9eed57c30aa734be}\label{classcontainers_1_1_tree_common_iterator_a9db0b07c5b73b91b9eed57c30aa734be}} 
+using {\bfseries const\+\_\+tree\+\_\+reference} = const \mbox{\hyperlink{classcontainers_1_1_tree}{tree\+\_\+type}} \&
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a603bc7fb9e17d2109ff0d3e162646d49}\label{classcontainers_1_1_tree_common_iterator_a603bc7fb9e17d2109ff0d3e162646d49}} 
+using {\bfseries tree\+\_\+pointer} = \mbox{\hyperlink{classcontainers_1_1_tree}{tree\+\_\+type}} $\ast$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_ad87e6d3ff13696fdc261a0f4ed33d398}\label{classcontainers_1_1_tree_common_iterator_ad87e6d3ff13696fdc261a0f4ed33d398}} 
+using {\bfseries const\+\_\+tree\+\_\+pointer} = const \mbox{\hyperlink{classcontainers_1_1_tree}{tree\+\_\+type}} $\ast$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a8d28fcefee5faae4359ea4eccae1d491}\label{classcontainers_1_1_tree_common_iterator_a8d28fcefee5faae4359ea4eccae1d491}} 
+using {\bfseries conditional\+\_\+tree\+\_\+ptr} = std\+::conditional\+\_\+t$<$ Is\+Const, \mbox{\hyperlink{classcontainers_1_1_tree}{const\+\_\+tree\+\_\+pointer}}, \mbox{\hyperlink{classcontainers_1_1_tree}{tree\+\_\+pointer}} $>$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a0f0d404dc97735c6ae18cc9016a1afce}\label{classcontainers_1_1_tree_common_iterator_a0f0d404dc97735c6ae18cc9016a1afce}} 
+using {\bfseries conditional\+\_\+tree\+\_\+ref} = std\+::conditional\+\_\+t$<$ Is\+Const, \mbox{\hyperlink{classcontainers_1_1_tree}{const\+\_\+tree\+\_\+reference}}, \mbox{\hyperlink{classcontainers_1_1_tree}{tree\+\_\+reference}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator_a8b013370b2ef9226cb2691882d280d32}{Tree\+Common\+Iterator}} () noexcept
+\item 
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator_a3fb2da0fa83b880cd3c9c3e3b9f2d390}{Tree\+Common\+Iterator}} (conditional\+\_\+tree\+\_\+ptr tree)
+\item 
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator_abe655153dc88841836555bc91d87b05d}{Tree\+Common\+Iterator}} (conditional\+\_\+tree\+\_\+ptr tree, conditional\+\_\+node\+\_\+ptr node)
+\item 
+value\+\_\+type \& \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator_a7dd9d239fb68ed181dcdfff76ed2d69c}{operator$\ast$}} () const
+\item 
+value\+\_\+type \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator_a767d0b588ff2b14866459ba63b7bac68}{operator-\/$>$}} () const
+\item 
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{Tree\+Common\+Iterator}} \& \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator_ab1d85b3d31c0bc521de3c9f75fcf61cc}{operator++}} ()
+\item 
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{Tree\+Common\+Iterator}} \& \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator_a00753d4dbae80916de999c7008d2e0a9}{operator++}} (int)
+\item 
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{Tree\+Common\+Iterator}} \& \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator_a795348acc3dec38218d6b4760acca122}{operator-\/-\/}} ()
+\item 
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{Tree\+Common\+Iterator}} \& \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator_accd305153819f011e7a6ac69901fac74}{operator-\/-\/}} (int)
+\item 
+bool \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator_a3dfe66dad49a8fec47ec7b49e8ead4be}{operator==}} (const \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{Tree\+Common\+Iterator}} \&other)
+\item 
+bool \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator_a886114369d52f3847260c4a21810d9c3}{operator!=}} (const \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{Tree\+Common\+Iterator}} \&other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_acc522bac482b975fe6611d5dc4a03a57}\label{classcontainers_1_1_tree_common_iterator_acc522bac482b975fe6611d5dc4a03a57}} 
+class {\bfseries Tree$<$ Key, T $>$}
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_ae85844ea5eac0c597696327c48fd107a}\label{classcontainers_1_1_tree_common_iterator_ae85844ea5eac0c597696327c48fd107a}} 
+class {\bfseries Node$<$ Key, T $>$}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Key, typename T, bool Is\+Const$>$\newline
+class containers\+::\+Tree\+Common\+Iterator$<$ Key, T, Is\+Const $>$}
+
+Определение шаблоного класса итератора дерева. Первый параметр -\/ тип данных, второй параметр -\/ значение типа данных bool для опеределения итератора\+: const он или нет 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a8b013370b2ef9226cb2691882d280d32}\label{classcontainers_1_1_tree_common_iterator_a8b013370b2ef9226cb2691882d280d32}} 
+\index{containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}!TreeCommonIterator@{TreeCommonIterator}}
+\index{TreeCommonIterator@{TreeCommonIterator}!containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{TreeCommonIterator()}{TreeCommonIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , bool Is\+Const$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{containers\+::\+Tree\+Common\+Iterator}}$<$ Key, T, Is\+Const $>$\+::\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{Tree\+Common\+Iterator}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Конструктор итератора по умолчанию \mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a3fb2da0fa83b880cd3c9c3e3b9f2d390}\label{classcontainers_1_1_tree_common_iterator_a3fb2da0fa83b880cd3c9c3e3b9f2d390}} 
+\index{containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}!TreeCommonIterator@{TreeCommonIterator}}
+\index{TreeCommonIterator@{TreeCommonIterator}!containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{TreeCommonIterator()}{TreeCommonIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , bool Is\+Const$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{containers\+::\+Tree\+Common\+Iterator}}$<$ Key, T, Is\+Const $>$\+::\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{Tree\+Common\+Iterator}} (\begin{DoxyParamCaption}\item[{conditional\+\_\+tree\+\_\+ptr}]{tree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Параметризованный конструктор 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tree} & указатель на дерево \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_abe655153dc88841836555bc91d87b05d}\label{classcontainers_1_1_tree_common_iterator_abe655153dc88841836555bc91d87b05d}} 
+\index{containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}!TreeCommonIterator@{TreeCommonIterator}}
+\index{TreeCommonIterator@{TreeCommonIterator}!containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{TreeCommonIterator()}{TreeCommonIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , bool Is\+Const$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{containers\+::\+Tree\+Common\+Iterator}}$<$ Key, T, Is\+Const $>$\+::\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{Tree\+Common\+Iterator}} (\begin{DoxyParamCaption}\item[{conditional\+\_\+tree\+\_\+ptr}]{tree,  }\item[{conditional\+\_\+node\+\_\+ptr}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Параметризованный конструктор 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tree} & указатель на дерево \\
+\hline
+\mbox{\texttt{ out}}  & {\em node} & указатель на узел дерева \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a886114369d52f3847260c4a21810d9c3}\label{classcontainers_1_1_tree_common_iterator_a886114369d52f3847260c4a21810d9c3}} 
+\index{containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , bool Is\+Const$>$ \\
+bool \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{containers\+::\+Tree\+Common\+Iterator}}$<$ Key, T, Is\+Const $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{Tree\+Common\+Iterator}}$<$ Key, T, Is\+Const $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора != 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em other} & другой итератор дерева для сравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+проверка на равенство узлов 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a7dd9d239fb68ed181dcdfff76ed2d69c}\label{classcontainers_1_1_tree_common_iterator_a7dd9d239fb68ed181dcdfff76ed2d69c}} 
+\index{containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , bool Is\+Const$>$ \\
+value\+\_\+type\& \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{containers\+::\+Tree\+Common\+Iterator}}$<$ Key, T, Is\+Const $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора $\ast$ \begin{DoxyReturn}{Returns}
+значение данных дерева 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_ab1d85b3d31c0bc521de3c9f75fcf61cc}\label{classcontainers_1_1_tree_common_iterator_ab1d85b3d31c0bc521de3c9f75fcf61cc}} 
+\index{containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , bool Is\+Const$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{Tree\+Common\+Iterator}}\& \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{containers\+::\+Tree\+Common\+Iterator}}$<$ Key, T, Is\+Const $>$\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора ++ \begin{DoxyReturn}{Returns}
+$\ast$this 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a00753d4dbae80916de999c7008d2e0a9}\label{classcontainers_1_1_tree_common_iterator_a00753d4dbae80916de999c7008d2e0a9}} 
+\index{containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , bool Is\+Const$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{Tree\+Common\+Iterator}}\& \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{containers\+::\+Tree\+Common\+Iterator}}$<$ Key, T, Is\+Const $>$\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора ++ \begin{DoxyReturn}{Returns}
+$\ast$this 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a795348acc3dec38218d6b4760acca122}\label{classcontainers_1_1_tree_common_iterator_a795348acc3dec38218d6b4760acca122}} 
+\index{containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , bool Is\+Const$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{Tree\+Common\+Iterator}}\& \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{containers\+::\+Tree\+Common\+Iterator}}$<$ Key, T, Is\+Const $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора -- \begin{DoxyReturn}{Returns}
+$\ast$this 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_accd305153819f011e7a6ac69901fac74}\label{classcontainers_1_1_tree_common_iterator_accd305153819f011e7a6ac69901fac74}} 
+\index{containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , bool Is\+Const$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{Tree\+Common\+Iterator}}\& \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{containers\+::\+Tree\+Common\+Iterator}}$<$ Key, T, Is\+Const $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора -- \begin{DoxyReturn}{Returns}
+$\ast$this 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a767d0b588ff2b14866459ba63b7bac68}\label{classcontainers_1_1_tree_common_iterator_a767d0b588ff2b14866459ba63b7bac68}} 
+\index{containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , bool Is\+Const$>$ \\
+value\+\_\+type \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{containers\+::\+Tree\+Common\+Iterator}}$<$ Key, T, Is\+Const $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора -\/$>$ \begin{DoxyReturn}{Returns}
+значение данных дерева 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_common_iterator_a3dfe66dad49a8fec47ec7b49e8ead4be}\label{classcontainers_1_1_tree_common_iterator_a3dfe66dad49a8fec47ec7b49e8ead4be}} 
+\index{containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!containers::TreeCommonIterator$<$ Key, T, IsConst $>$@{containers::TreeCommonIterator$<$ Key, T, IsConst $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , bool Is\+Const$>$ \\
+bool \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{containers\+::\+Tree\+Common\+Iterator}}$<$ Key, T, Is\+Const $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{Tree\+Common\+Iterator}}$<$ Key, T, Is\+Const $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перегрузка опрератора == 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em other} & другой итератор дерева для сравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+проверка на равенство узлов 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rbtree_8h}{rbtree.\+h}}\end{DoxyCompactItemize}

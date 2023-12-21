@@ -1,0 +1,373 @@
+\hypertarget{classcontainers_1_1_vector}{}\doxysection{containers\+::Vector$<$ T, Alloc $>$ Class Template Reference}
+\label{classcontainers_1_1_vector}\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+
+
+{\ttfamily \#include $<$vector.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_vector_a3d7b689d6e845bba5bf9833830995717}\label{classcontainers_1_1_vector_a3d7b689d6e845bba5bf9833830995717}} 
+using {\bfseries value\+\_\+type} = T
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_vector_ac9f9f6289076464fc644a0821078d51e}\label{classcontainers_1_1_vector_ac9f9f6289076464fc644a0821078d51e}} 
+using {\bfseries reference} = T \&
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_vector_a5de721a918bc9ac4bd2a1e0b05c32646}\label{classcontainers_1_1_vector_a5de721a918bc9ac4bd2a1e0b05c32646}} 
+using {\bfseries const\+\_\+reference} = const T \&
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_vector_a4081d5af90c8a2e07276b9dcf67d615c}\label{classcontainers_1_1_vector_a4081d5af90c8a2e07276b9dcf67d615c}} 
+using {\bfseries pointer} = T $\ast$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_vector_a91847a613b4e326b0a5879fcc198bde2}\label{classcontainers_1_1_vector_a91847a613b4e326b0a5879fcc198bde2}} 
+using {\bfseries const\+\_\+pointer} = const T $\ast$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_vector_a9d00d7811d2b8916db9e0e7c3ddd4bb8}\label{classcontainers_1_1_vector_a9d00d7811d2b8916db9e0e7c3ddd4bb8}} 
+using {\bfseries iterator} = \mbox{\hyperlink{classcontainers_1_1_common_iterator}{Common\+Iterator}}$<$ T, false $>$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_vector_a21fa48295fd1795bd67df46bd39de100}\label{classcontainers_1_1_vector_a21fa48295fd1795bd67df46bd39de100}} 
+using {\bfseries const\+\_\+iterator} = \mbox{\hyperlink{classcontainers_1_1_common_iterator}{Common\+Iterator}}$<$ T, true $>$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_vector_a41197b6b6cfa40ee599b92a472ffe475}\label{classcontainers_1_1_vector_a41197b6b6cfa40ee599b92a472ffe475}} 
+using {\bfseries size\+\_\+type} = size\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcontainers_1_1_vector_a66b214bd501c18f1635cbed5125cf6de}{Vector}} () noexcept
+\item 
+\mbox{\hyperlink{classcontainers_1_1_vector_a2895f6c3f849a89af3f7a92879f6cbbe}{Vector}} (size\+\_\+t count)
+\item 
+\mbox{\hyperlink{classcontainers_1_1_vector_a315d44402616fc623f032d15b63ef3e0}{Vector}} (std\+::initializer\+\_\+list$<$ value\+\_\+type $>$ const \&items)
+\item 
+\mbox{\hyperlink{classcontainers_1_1_vector_a39a0e8791aacb7c696a9ce2580ec91b6}{Vector}} (const \mbox{\hyperlink{classcontainers_1_1_vector}{Vector}} \&v)
+\item 
+\mbox{\hyperlink{classcontainers_1_1_vector_ac4d426ccf204c8d327167562eac654df}{Vector}} (\mbox{\hyperlink{classcontainers_1_1_vector}{Vector}} \&\&v) noexcept
+\item 
+\mbox{\hyperlink{classcontainers_1_1_vector}{Vector}} \& \mbox{\hyperlink{classcontainers_1_1_vector_a13e83e20b9d636c8dd3c622db9070b9b}{operator=}} (const \mbox{\hyperlink{classcontainers_1_1_vector}{Vector}} \&v)
+\item 
+\mbox{\hyperlink{classcontainers_1_1_vector}{Vector}} \& \mbox{\hyperlink{classcontainers_1_1_vector_ae6b5f766d0da5464bf5f7da679f843f2}{operator=}} (\mbox{\hyperlink{classcontainers_1_1_vector}{Vector}} \&\&v) noexcept
+\item 
+\mbox{\hyperlink{classcontainers_1_1_vector_aae26adbc1391f48222db569c610583d1}{$\sim$\+Vector}} ()
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_vector_a7ae12f5dcb82a3175c9bcaf6ee55a4db}\label{classcontainers_1_1_vector_a7ae12f5dcb82a3175c9bcaf6ee55a4db}} 
+reference {\bfseries at} (size\+\_\+type pos) const
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_vector_a08fe827a34b9d926604b127254b3b62a}\label{classcontainers_1_1_vector_a08fe827a34b9d926604b127254b3b62a}} 
+reference {\bfseries operator\mbox{[}$\,$\mbox{]}} (size\+\_\+type pos)
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_vector_a8d05106c23c0a2dcae1b24cae7d2dfd0}\label{classcontainers_1_1_vector_a8d05106c23c0a2dcae1b24cae7d2dfd0}} 
+const\+\_\+reference {\bfseries front} () const
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_vector_a3abb971d456ed9660e513ca0abb766f4}\label{classcontainers_1_1_vector_a3abb971d456ed9660e513ca0abb766f4}} 
+const\+\_\+reference {\bfseries back} () const
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_vector_a5663eead5a23fc543049235082f7c823}\label{classcontainers_1_1_vector_a5663eead5a23fc543049235082f7c823}} 
+pointer {\bfseries data} () noexcept
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_vector_ab98986c871b57253c4d3c3bc323c769f}\label{classcontainers_1_1_vector_ab98986c871b57253c4d3c3bc323c769f}} 
+\mbox{\hyperlink{classcontainers_1_1_common_iterator}{iterator}} {\bfseries begin} () noexcept
+\item 
+\mbox{\hyperlink{classcontainers_1_1_common_iterator}{iterator}} \mbox{\hyperlink{classcontainers_1_1_vector_ab95e2d9a0be749576a2e97f4bd4c3932}{end}} () noexcept
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_vector_ad94b3b278ddd50ec48fe7f7e24e1d373}\label{classcontainers_1_1_vector_ad94b3b278ddd50ec48fe7f7e24e1d373}} 
+\mbox{\hyperlink{classcontainers_1_1_common_iterator}{const\+\_\+iterator}} {\bfseries cbegin} () const noexcept
+\item 
+\mbox{\hyperlink{classcontainers_1_1_common_iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classcontainers_1_1_vector_a4a682e0cc47833da98500dd10af74ba7}{cend}} () const noexcept
+\item 
+bool \mbox{\hyperlink{classcontainers_1_1_vector_a2bf8253603c54bad9a75dd22b93ac414}{empty}} () const noexcept
+\item 
+size\+\_\+type \mbox{\hyperlink{classcontainers_1_1_vector_a98dc2c13df922b4968a424525ee36a55}{size}} () const noexcept
+\item 
+size\+\_\+type \mbox{\hyperlink{classcontainers_1_1_vector_a530e65d2206c3b7e4e60c76339104ff3}{max\+\_\+size}} () const noexcept
+\item 
+void \mbox{\hyperlink{classcontainers_1_1_vector_adffc7ac21e89550f47fb479aedb57361}{reserve}} (size\+\_\+type new\+\_\+cap)
+\item 
+size\+\_\+type \mbox{\hyperlink{classcontainers_1_1_vector_a7233a401cebce350386a23e10a418448}{capacity}} () const noexcept
+\item 
+void \mbox{\hyperlink{classcontainers_1_1_vector_a4ba20790d4686e0ba22c0168c786ba9c}{shrink\+\_\+to\+\_\+fit}} ()
+\item 
+void \mbox{\hyperlink{classcontainers_1_1_vector_a208da4ad5e48e9e8357f53247bf6502f}{clear}} () noexcept
+\item 
+\mbox{\hyperlink{classcontainers_1_1_common_iterator}{iterator}} \mbox{\hyperlink{classcontainers_1_1_vector_a04fe45e2d2c2206ad2372cf562efae67}{insert}} (\mbox{\hyperlink{classcontainers_1_1_common_iterator}{iterator}} pos, const\+\_\+reference value)
+\item 
+\mbox{\hyperlink{classcontainers_1_1_common_iterator}{iterator}} \mbox{\hyperlink{classcontainers_1_1_vector_aef513f6738f2d580f77ec1b02c303847}{erase}} (\mbox{\hyperlink{classcontainers_1_1_common_iterator}{iterator}} pos)
+\item 
+void \mbox{\hyperlink{classcontainers_1_1_vector_a3b118266ec080ced3161d03ebe9d6b2a}{push\+\_\+back}} (const\+\_\+reference value)
+\item 
+void \mbox{\hyperlink{classcontainers_1_1_vector_aeada7982635a89655a169520921e8a2b}{pop\+\_\+back}} ()
+\item 
+void \mbox{\hyperlink{classcontainers_1_1_vector_a666855cd9a0e6f58f54174598a284586}{swap}} (\mbox{\hyperlink{classcontainers_1_1_vector}{Vector}} \&other) noexcept
+\item 
+void \mbox{\hyperlink{classcontainers_1_1_vector_aae30e8286d51ade84030ad7e113553b0}{resize}} (size\+\_\+type n)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, typename Alloc = std\+::allocator$<$\+T$>$$>$\newline
+class containers\+::\+Vector$<$ T, Alloc $>$}
+
+Определение шаблоного класса вектора. Первый параметр -\/ тип данных, второй параметр -\/ Allocator по умолчанию, который используется всеми контейнерами стандартной библиотеки, если не указан пользовательский Allocator 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcontainers_1_1_vector_a66b214bd501c18f1635cbed5125cf6de}\label{classcontainers_1_1_vector_a66b214bd501c18f1635cbed5125cf6de}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::\mbox{\hyperlink{classcontainers_1_1_vector}{Vector}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Конструктор по умолчанию, создает пустой вектор \mbox{\Hypertarget{classcontainers_1_1_vector_a2895f6c3f849a89af3f7a92879f6cbbe}\label{classcontainers_1_1_vector_a2895f6c3f849a89af3f7a92879f6cbbe}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::\mbox{\hyperlink{classcontainers_1_1_vector}{Vector}} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Параметризованный конструктор, создает вектор размера n 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em count} & размер вектора n \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcontainers_1_1_vector_a315d44402616fc623f032d15b63ef3e0}\label{classcontainers_1_1_vector_a315d44402616fc623f032d15b63ef3e0}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::\mbox{\hyperlink{classcontainers_1_1_vector}{Vector}} (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ value\+\_\+type $>$ const \&}]{items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Конструктор списка инициализаторов. Создает вектор, инициализированный с использованием std\+::initializer\+\_\+list 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em items} & список для инициализации вектора \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcontainers_1_1_vector_a39a0e8791aacb7c696a9ce2580ec91b6}\label{classcontainers_1_1_vector_a39a0e8791aacb7c696a9ce2580ec91b6}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::\mbox{\hyperlink{classcontainers_1_1_vector}{Vector}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcontainers_1_1_vector}{Vector}}$<$ T, Alloc $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Конструктор копирования 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & контейнер для использования в качестве источника данных для копирования \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcontainers_1_1_vector_ac4d426ccf204c8d327167562eac654df}\label{classcontainers_1_1_vector_ac4d426ccf204c8d327167562eac654df}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::\mbox{\hyperlink{classcontainers_1_1_vector}{Vector}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontainers_1_1_vector}{Vector}}$<$ T, Alloc $>$ \&\&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Конструктор перемещения 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & контейнер для использования в качестве источника данных для перемещения \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcontainers_1_1_vector_aae26adbc1391f48222db569c610583d1}\label{classcontainers_1_1_vector_aae26adbc1391f48222db569c610583d1}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!````~Vector@{$\sim$Vector}}
+\index{````~Vector@{$\sim$Vector}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Vector()}{~Vector()}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::$\sim$\mbox{\hyperlink{classcontainers_1_1_vector}{Vector}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Деструктор 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcontainers_1_1_vector_a7233a401cebce350386a23e10a418448}\label{classcontainers_1_1_vector_a7233a401cebce350386a23e10a418448}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!capacity@{capacity}}
+\index{capacity@{capacity}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{capacity()}{capacity()}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+size\+\_\+type \mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Возвращает количество элементов, для которых контейнер в данный момент выделил место \begin{DoxyReturn}{Returns}
+Емкость выделенного в данный момент хранилища 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_vector_a4a682e0cc47833da98500dd10af74ba7}\label{classcontainers_1_1_vector_a4a682e0cc47833da98500dd10af74ba7}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!cend@{cend}}
+\index{cend@{cend}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{cend()}{cend()}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_common_iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::cend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Возвращает сonst-\/итератор конца вектора \begin{DoxyReturn}{Returns}
+Const-\/итератор конца вектора 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_vector_a208da4ad5e48e9e8357f53247bf6502f}\label{classcontainers_1_1_vector_a208da4ad5e48e9e8357f53247bf6502f}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!clear@{clear}}
+\index{clear@{clear}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Удаление всех элементов из контейнера \mbox{\Hypertarget{classcontainers_1_1_vector_a2bf8253603c54bad9a75dd22b93ac414}\label{classcontainers_1_1_vector_a2bf8253603c54bad9a75dd22b93ac414}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!empty@{empty}}
+\index{empty@{empty}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+bool \mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Проверяет есть ли в контейнере элементы \begin{DoxyReturn}{Returns}
+Пуст или не пуст контейнер 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_vector_ab95e2d9a0be749576a2e97f4bd4c3932}\label{classcontainers_1_1_vector_ab95e2d9a0be749576a2e97f4bd4c3932}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!end@{end}}
+\index{end@{end}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_common_iterator}{iterator}} \mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Возвращает итератор конца вектора \begin{DoxyReturn}{Returns}
+Итератор конца вектора 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_vector_aef513f6738f2d580f77ec1b02c303847}\label{classcontainers_1_1_vector_aef513f6738f2d580f77ec1b02c303847}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!erase@{erase}}
+\index{erase@{erase}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_common_iterator}{iterator}} \mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontainers_1_1_common_iterator}{iterator}}}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Удаляет указанный элемент из контейнера 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pos} & итератор элемента, который нужно удалить \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+итератор, следующий за последним удаленным элементом 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_vector_a04fe45e2d2c2206ad2372cf562efae67}\label{classcontainers_1_1_vector_a04fe45e2d2c2206ad2372cf562efae67}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!insert@{insert}}
+\index{insert@{insert}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_common_iterator}{iterator}} \mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontainers_1_1_common_iterator}{iterator}}}]{pos,  }\item[{const\+\_\+reference}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Производит вставку элемента в указанное место в контейнере 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pos} & итератор, перед которым будет вставлен новый элемент \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & значение элемента для вставки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Итератор, указывающий на вставленное новое значение 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_vector_a530e65d2206c3b7e4e60c76339104ff3}\label{classcontainers_1_1_vector_a530e65d2206c3b7e4e60c76339104ff3}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!max\_size@{max\_size}}
+\index{max\_size@{max\_size}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{max\_size()}{max\_size()}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+size\+\_\+type \mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::max\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Возвращает максимальное количество элементов, которые контейнер может хранить из-\/за ограничений реализации системы или библиотеки \begin{DoxyReturn}{Returns}
+Максимальное количество элементов 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_vector_a13e83e20b9d636c8dd3c622db9070b9b}\label{classcontainers_1_1_vector_a13e83e20b9d636c8dd3c622db9070b9b}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_vector}{Vector}}\& \mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcontainers_1_1_vector}{Vector}}$<$ T, Alloc $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Оператор присваивания -\/ копирования. Заменяет содержимое вектора копией содержимого другого вектора
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Контейнер для использования в качестве источника данных \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$this 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_vector_ae6b5f766d0da5464bf5f7da679f843f2}\label{classcontainers_1_1_vector_ae6b5f766d0da5464bf5f7da679f843f2}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_vector}{Vector}}\& \mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontainers_1_1_vector}{Vector}}$<$ T, Alloc $>$ \&\&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Оператор присваивания -\/ перемещения. Заменяет содержимое вектора на содержимое другого контейнера, используя семантику перемещения.
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & контейнер для использования в качестве источника данных \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$this 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_vector_aeada7982635a89655a169520921e8a2b}\label{classcontainers_1_1_vector_aeada7982635a89655a169520921e8a2b}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!pop\_back@{pop\_back}}
+\index{pop\_back@{pop\_back}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_back()}{pop\_back()}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::pop\+\_\+back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Удаляет последний элемент контейнера \mbox{\Hypertarget{classcontainers_1_1_vector_a3b118266ec080ced3161d03ebe9d6b2a}\label{classcontainers_1_1_vector_a3b118266ec080ced3161d03ebe9d6b2a}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const\+\_\+reference}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Добавляет заданное значение элемента в конец контейнера 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em value} & значение элемента для добавления \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcontainers_1_1_vector_adffc7ac21e89550f47fb479aedb57361}\label{classcontainers_1_1_vector_adffc7ac21e89550f47fb479aedb57361}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!reserve@{reserve}}
+\index{reserve@{reserve}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{reserve()}{reserve()}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::reserve (\begin{DoxyParamCaption}\item[{size\+\_\+type}]{new\+\_\+cap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Увеличение емкости вектра до значения new\+\_\+cap 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em new\+\_\+cap} & -\/ новая емкость вектора (количество новых элементов) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcontainers_1_1_vector_aae30e8286d51ade84030ad7e113553b0}\label{classcontainers_1_1_vector_aae30e8286d51ade84030ad7e113553b0}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!resize@{resize}}
+\index{resize@{resize}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::resize (\begin{DoxyParamCaption}\item[{size\+\_\+type}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Изменяет размер контейнера, чтобы он содержал количество элементов 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n} & новый размер контейнера \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcontainers_1_1_vector_a4ba20790d4686e0ba22c0168c786ba9c}\label{classcontainers_1_1_vector_a4ba20790d4686e0ba22c0168c786ba9c}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!shrink\_to\_fit@{shrink\_to\_fit}}
+\index{shrink\_to\_fit@{shrink\_to\_fit}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{shrink\_to\_fit()}{shrink\_to\_fit()}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::shrink\+\_\+to\+\_\+fit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Уменьшение (удаление) емкости до размера вектора \mbox{\Hypertarget{classcontainers_1_1_vector_a98dc2c13df922b4968a424525ee36a55}\label{classcontainers_1_1_vector_a98dc2c13df922b4968a424525ee36a55}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!size@{size}}
+\index{size@{size}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+size\+\_\+type \mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Возвращает количество элементов в контейнере \begin{DoxyReturn}{Returns}
+Количество элементов в контейнере 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_vector_a666855cd9a0e6f58f54174598a284586}\label{classcontainers_1_1_vector_a666855cd9a0e6f58f54174598a284586}} 
+\index{containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}!swap@{swap}}
+\index{swap@{swap}!containers::Vector$<$ T, Alloc $>$@{containers::Vector$<$ T, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector}}$<$ T, Alloc $>$\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontainers_1_1_vector}{Vector}}$<$ T, Alloc $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Заменяет содержимое и емкость контейнера другим 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em other} & контейнер для обмена содержимым \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vector_8h}{vector.\+h}}\end{DoxyCompactItemize}

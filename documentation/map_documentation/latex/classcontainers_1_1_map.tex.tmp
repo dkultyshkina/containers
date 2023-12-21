@@ -1,0 +1,359 @@
+\hypertarget{classcontainers_1_1_map}{}\doxysection{containers\+::Map$<$ Key, T, Compare, Alloc $>$ Class Template Reference}
+\label{classcontainers_1_1_map}\index{containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}}
+
+
+{\ttfamily \#include $<$map.\+h$>$}
+
+
+
+Inheritance diagram for containers\+::Map$<$ Key, T, Compare, Alloc $>$\+:
+% FIG 0
+
+
+Collaboration diagram for containers\+::Map$<$ Key, T, Compare, Alloc $>$\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_map_ac686d17b24e61e78c270144005f952b4}\label{classcontainers_1_1_map_ac686d17b24e61e78c270144005f952b4}} 
+using {\bfseries key\+\_\+type} = Key
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_map_a71b8a4628eaecabaeec7e7227e072536}\label{classcontainers_1_1_map_a71b8a4628eaecabaeec7e7227e072536}} 
+using {\bfseries mapped\+\_\+type} = T
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_map_afe85ff6fa11cab5c7fda5c6b1852b213}\label{classcontainers_1_1_map_afe85ff6fa11cab5c7fda5c6b1852b213}} 
+using {\bfseries value\+\_\+type} = std\+::pair$<$ const Key, T $>$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_map_a3d746721846385e19af7a8a4228e5946}\label{classcontainers_1_1_map_a3d746721846385e19af7a8a4228e5946}} 
+using {\bfseries reference} = value\+\_\+type \&
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_map_a1a2c5e340ecda3298d5547f959dbf0bb}\label{classcontainers_1_1_map_a1a2c5e340ecda3298d5547f959dbf0bb}} 
+using {\bfseries const\+\_\+reference} = const value\+\_\+type \&
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_map_ae0e005fb5f8bdeca1609bc9451efa594}\label{classcontainers_1_1_map_ae0e005fb5f8bdeca1609bc9451efa594}} 
+using {\bfseries pointer} = value\+\_\+type $\ast$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_map_a54bf628a25f2adc0af2c7efae2503525}\label{classcontainers_1_1_map_a54bf628a25f2adc0af2c7efae2503525}} 
+using {\bfseries const\+\_\+pointer} = const value\+\_\+type $\ast$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_map_a425529a1b80a557e68e1742b75d8e333}\label{classcontainers_1_1_map_a425529a1b80a557e68e1742b75d8e333}} 
+using {\bfseries Node\+Alloc} = typename std\+::allocator\+\_\+traits$<$ Alloc $>$\+::template rebind\+\_\+alloc$<$ \mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$ key\+\_\+type, mapped\+\_\+type $>$ $>$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_map_aa9caabcf775ea9c99a8e9a4501454805}\label{classcontainers_1_1_map_aa9caabcf775ea9c99a8e9a4501454805}} 
+using {\bfseries Data\+Alloc} = typename std\+::allocator\+\_\+traits$<$ Alloc $>$\+::template rebind\+\_\+alloc$<$ std\+::pair$<$ const Key, T $>$ $>$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_map_a6af962e4e1173e4f17ea1a6c08b64365}\label{classcontainers_1_1_map_a6af962e4e1173e4f17ea1a6c08b64365}} 
+using {\bfseries iterator} = \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{Tree\+Common\+Iterator}}$<$ key\+\_\+type, mapped\+\_\+type, false $>$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_map_afe6d257a742b3ed222a316a85d3bd2ba}\label{classcontainers_1_1_map_afe6d257a742b3ed222a316a85d3bd2ba}} 
+using {\bfseries const\+\_\+iterator} = \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{Tree\+Common\+Iterator}}$<$ key\+\_\+type, mapped\+\_\+type, true $>$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_map_a65fd948b05113169279db8b3b3d9daaf}\label{classcontainers_1_1_map_a65fd948b05113169279db8b3b3d9daaf}} 
+using {\bfseries size\+\_\+type} = size\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcontainers_1_1_map_ad05d9b090faaf6aaf3f50bdb1ad65231}{Map}} ()
+\item 
+\mbox{\hyperlink{classcontainers_1_1_map_a3622251c84de8a2752a5c2b2835dbbc1}{Map}} (std\+::initializer\+\_\+list$<$ value\+\_\+type $>$ const \&items)
+\item 
+\mbox{\hyperlink{classcontainers_1_1_map_ad059494e58abbe6c0b61da4a07c6782f}{Map}} (const \mbox{\hyperlink{classcontainers_1_1_map}{Map}} \&m)
+\item 
+\mbox{\hyperlink{classcontainers_1_1_map_a3841dce248eaa31b96d63f12140e047c}{Map}} (\mbox{\hyperlink{classcontainers_1_1_map}{Map}} \&\&m)
+\item 
+\mbox{\hyperlink{classcontainers_1_1_map}{Map}} \& \mbox{\hyperlink{classcontainers_1_1_map_a008533493d3cce91b70d1a3b0d92a260}{operator=}} (\mbox{\hyperlink{classcontainers_1_1_map}{Map}} \&\&m)
+\item 
+\mbox{\hyperlink{classcontainers_1_1_map}{Map}} \& \mbox{\hyperlink{classcontainers_1_1_map_ac77d2ae3a603df1af937b5ceaa444249}{operator=}} (const \mbox{\hyperlink{classcontainers_1_1_map}{Map}} \&m)
+\item 
+\mbox{\hyperlink{classcontainers_1_1_map_a75d5f7fbafe66f0a7a7a4c154760f7c4}{$\sim$\+Map}} ()
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_map_aa89775457155d4e47f52eece24d8ca22}\label{classcontainers_1_1_map_aa89775457155d4e47f52eece24d8ca22}} 
+T \& {\bfseries at} (const Key \&key) const
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_map_a8e7fa193b0713004b4cae125d36e8893}\label{classcontainers_1_1_map_a8e7fa193b0713004b4cae125d36e8893}} 
+T \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (const key\+\_\+type \&key)
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_map_aac118171e48a7fccc52c31cb2c01ee9b}\label{classcontainers_1_1_map_aac118171e48a7fccc52c31cb2c01ee9b}} 
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{iterator}} {\bfseries begin} () noexcept
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_map_ae32e7316b059ec61330bb5f4f01fbc8f}\label{classcontainers_1_1_map_ae32e7316b059ec61330bb5f4f01fbc8f}} 
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{iterator}} {\bfseries end} () noexcept
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_map_a348040ea9587f69ee16e5460e03cb55d}\label{classcontainers_1_1_map_a348040ea9587f69ee16e5460e03cb55d}} 
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{const\+\_\+iterator}} {\bfseries cbegin} () const noexcept
+\item 
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classcontainers_1_1_map_ad8374df33ee4cd0bde09c67aef10640a}{cend}} () const noexcept
+\item 
+bool \mbox{\hyperlink{classcontainers_1_1_map_a00364bbc390e7c16690408ad21589b9c}{empty}} () const noexcept
+\item 
+size\+\_\+type \mbox{\hyperlink{classcontainers_1_1_map_a52fe7d04aa2df18beee53975c38b491e}{size}} () const noexcept
+\item 
+size\+\_\+type \mbox{\hyperlink{classcontainers_1_1_map_af0582aa3d8ddda61378c00638a67c862}{max\+\_\+size}} () const noexcept
+\item 
+void \mbox{\hyperlink{classcontainers_1_1_map_a1b2b2f503849dd22fb80c0004625ba50}{clear}} ()
+\item 
+std\+::pair$<$ \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{iterator}}, bool $>$ \mbox{\hyperlink{classcontainers_1_1_map_a331683269b61faa9c6683f3cebf3225f}{insert}} (const value\+\_\+type \&value)
+\item 
+std\+::pair$<$ \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{iterator}}, bool $>$ \mbox{\hyperlink{classcontainers_1_1_map_a40b9684a568815df424dd928ace9d39e}{insert}} (const key\+\_\+type \&key, const mapped\+\_\+type \&obj)
+\item 
+std\+::pair$<$ \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{iterator}}, bool $>$ \mbox{\hyperlink{classcontainers_1_1_map_a3f7d6f986b9104a63ab63681ceaedc6a}{insert\+\_\+or\+\_\+assign}} (const key\+\_\+type \&key, const mapped\+\_\+type \&obj)
+\item 
+void \mbox{\hyperlink{classcontainers_1_1_map_a2d2651e5a67a8d501f3a40f9ecdf43b2}{erase}} (\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{iterator}} pos)
+\item 
+void \mbox{\hyperlink{classcontainers_1_1_map_a4a0b8e20c59d954d2cc12003ac37ca35}{swap}} (\mbox{\hyperlink{classcontainers_1_1_map}{Map}} \&other)
+\item 
+void \mbox{\hyperlink{classcontainers_1_1_map_ad02b603e2be95263ea6971d4b5a68e31}{merge}} (\mbox{\hyperlink{classcontainers_1_1_map}{Map}} \&other)
+\item 
+bool \mbox{\hyperlink{classcontainers_1_1_map_ae3982b7f4966accb925660d5e4b21578}{contains}} (const Key \&key) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_map_acc522bac482b975fe6611d5dc4a03a57}\label{classcontainers_1_1_map_acc522bac482b975fe6611d5dc4a03a57}} 
+class {\bfseries Tree$<$ Key, T $>$}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Key, typename T, typename Compare = std\+::less$<$\+Key$>$, typename Alloc = std\+::allocator$<$\+T$>$$>$\newline
+class containers\+::\+Map$<$ Key, T, Compare, Alloc $>$}
+
+Определение шаблоного класса map. Первый параметр -\/ тип ключа, второй -\/ тип данных, третий -\/ compare (cравнивает значение строкового объекта), четвертый параметр -\/ Allocator по умолчанию, который используется всеми контейнерами стандартной библиотеки, если не указан пользовательский Allocator 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcontainers_1_1_map_ad05d9b090faaf6aaf3f50bdb1ad65231}\label{classcontainers_1_1_map_ad05d9b090faaf6aaf3f50bdb1ad65231}} 
+\index{containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}!Map@{Map}}
+\index{Map@{Map}!containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_map}{containers\+::\+Map}}$<$ Key, T, Compare, Alloc $>$\+::\mbox{\hyperlink{classcontainers_1_1_map}{Map}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Конструктор по умолчанию, создает пустой контейнер \mbox{\Hypertarget{classcontainers_1_1_map_a3622251c84de8a2752a5c2b2835dbbc1}\label{classcontainers_1_1_map_a3622251c84de8a2752a5c2b2835dbbc1}} 
+\index{containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}!Map@{Map}}
+\index{Map@{Map}!containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_map}{containers\+::\+Map}}$<$ Key, T, Compare, Alloc $>$\+::\mbox{\hyperlink{classcontainers_1_1_map}{Map}} (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ value\+\_\+type $>$ const \&}]{items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Конструктор списка инициализаторов. Создает контейнер, инициализированный с использованием std\+::initializer\+\_\+list 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em items} & Список для инициализации контейнера \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcontainers_1_1_map_ad059494e58abbe6c0b61da4a07c6782f}\label{classcontainers_1_1_map_ad059494e58abbe6c0b61da4a07c6782f}} 
+\index{containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}!Map@{Map}}
+\index{Map@{Map}!containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_map}{containers\+::\+Map}}$<$ Key, T, Compare, Alloc $>$\+::\mbox{\hyperlink{classcontainers_1_1_map}{Map}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcontainers_1_1_map}{Map}}$<$ Key, T, Compare, Alloc $>$ \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Конструктор копирования 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & контейнер map для использования в качестве источника данных для копирования \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcontainers_1_1_map_a3841dce248eaa31b96d63f12140e047c}\label{classcontainers_1_1_map_a3841dce248eaa31b96d63f12140e047c}} 
+\index{containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}!Map@{Map}}
+\index{Map@{Map}!containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_map}{containers\+::\+Map}}$<$ Key, T, Compare, Alloc $>$\+::\mbox{\hyperlink{classcontainers_1_1_map}{Map}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontainers_1_1_map}{Map}}$<$ Key, T, Compare, Alloc $>$ \&\&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Конструктор перемещения 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & контейнера map для использования в качестве источника данных для перемещения \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcontainers_1_1_map_a75d5f7fbafe66f0a7a7a4c154760f7c4}\label{classcontainers_1_1_map_a75d5f7fbafe66f0a7a7a4c154760f7c4}} 
+\index{containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}!````~Map@{$\sim$Map}}
+\index{````~Map@{$\sim$Map}!containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Map()}{~Map()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_map}{containers\+::\+Map}}$<$ Key, T, Compare, Alloc $>$\+::$\sim$\mbox{\hyperlink{classcontainers_1_1_map}{Map}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Деструктор 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcontainers_1_1_map_ad8374df33ee4cd0bde09c67aef10640a}\label{classcontainers_1_1_map_ad8374df33ee4cd0bde09c67aef10640a}} 
+\index{containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}!cend@{cend}}
+\index{cend@{cend}!containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{cend()}{cend()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classcontainers_1_1_map}{containers\+::\+Map}}$<$ Key, T, Compare, Alloc $>$\+::cend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Возвращает сonst-\/итератор конца map \begin{DoxyReturn}{Returns}
+Const-\/итератор конца вектора 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_map_a1b2b2f503849dd22fb80c0004625ba50}\label{classcontainers_1_1_map_a1b2b2f503849dd22fb80c0004625ba50}} 
+\index{containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}!clear@{clear}}
+\index{clear@{clear}!containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classcontainers_1_1_map}{containers\+::\+Map}}$<$ Key, T, Compare, Alloc $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Удаление всех элементов из контейнера \mbox{\Hypertarget{classcontainers_1_1_map_ae3982b7f4966accb925660d5e4b21578}\label{classcontainers_1_1_map_ae3982b7f4966accb925660d5e4b21578}} 
+\index{containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}!contains@{contains}}
+\index{contains@{contains}!containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+bool \mbox{\hyperlink{classcontainers_1_1_map}{containers\+::\+Map}}$<$ Key, T, Compare, Alloc $>$\+::contains (\begin{DoxyParamCaption}\item[{const Key \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Проверяет, есть ли в контейнере map элемент, эквивалентный требуемому ключу 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em key} & -\/ ключевое значение элемента для поиска \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Существует или нет элемент в контейнере 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_map_a00364bbc390e7c16690408ad21589b9c}\label{classcontainers_1_1_map_a00364bbc390e7c16690408ad21589b9c}} 
+\index{containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}!empty@{empty}}
+\index{empty@{empty}!containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+bool \mbox{\hyperlink{classcontainers_1_1_map}{containers\+::\+Map}}$<$ Key, T, Compare, Alloc $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Проверяет есть ли в дереве элементы \begin{DoxyReturn}{Returns}
+Пуст или не пуст контейнер 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_map_a2d2651e5a67a8d501f3a40f9ecdf43b2}\label{classcontainers_1_1_map_a2d2651e5a67a8d501f3a40f9ecdf43b2}} 
+\index{containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}!erase@{erase}}
+\index{erase@{erase}!containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classcontainers_1_1_map}{containers\+::\+Map}}$<$ Key, T, Compare, Alloc $>$\+::erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{iterator}}}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Удаляет указанный элемент из контейнера map 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pos} & итератор элемента, который нужно удалить \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcontainers_1_1_map_a40b9684a568815df424dd928ace9d39e}\label{classcontainers_1_1_map_a40b9684a568815df424dd928ace9d39e}} 
+\index{containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}!insert@{insert}}
+\index{insert@{insert}!containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+std\+::pair$<$\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{iterator}}, bool$>$ \mbox{\hyperlink{classcontainers_1_1_map}{containers\+::\+Map}}$<$ Key, T, Compare, Alloc $>$\+::insert (\begin{DoxyParamCaption}\item[{const key\+\_\+type \&}]{key,  }\item[{const mapped\+\_\+type \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Производит вставку элемента в map 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em key} & значение ключа для вставки \\
+\hline
+\mbox{\texttt{ in}}  & {\em obj} & значение элемента для вставки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает пару, состоящую из итератора вставленного элемента (или элемента, который предотвратил вставку) и логического значения, равного true, когда вставка имела место 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_map_a331683269b61faa9c6683f3cebf3225f}\label{classcontainers_1_1_map_a331683269b61faa9c6683f3cebf3225f}} 
+\index{containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}!insert@{insert}}
+\index{insert@{insert}!containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+std\+::pair$<$\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{iterator}}, bool$>$ \mbox{\hyperlink{classcontainers_1_1_map}{containers\+::\+Map}}$<$ Key, T, Compare, Alloc $>$\+::insert (\begin{DoxyParamCaption}\item[{const value\+\_\+type \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Производит вставку элементов в map 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em value} & значение элемента для вставки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает пару, состоящую из итератора вставленного элемента (или элемента, который предотвратил вставку) и логического значения, равного true, когда вставка имела место 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_map_a3f7d6f986b9104a63ab63681ceaedc6a}\label{classcontainers_1_1_map_a3f7d6f986b9104a63ab63681ceaedc6a}} 
+\index{containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}!insert\_or\_assign@{insert\_or\_assign}}
+\index{insert\_or\_assign@{insert\_or\_assign}!containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{insert\_or\_assign()}{insert\_or\_assign()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+std\+::pair$<$\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{iterator}}, bool$>$ \mbox{\hyperlink{classcontainers_1_1_map}{containers\+::\+Map}}$<$ Key, T, Compare, Alloc $>$\+::insert\+\_\+or\+\_\+assign (\begin{DoxyParamCaption}\item[{const key\+\_\+type \&}]{key,  }\item[{const mapped\+\_\+type \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Если ключ не существует в map, вставляет новое значение, если нет, то находит существующий элемент
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em key} & значение ключа для вставки \\
+\hline
+\mbox{\texttt{ in}}  & {\em obj} & значение элемента для вставки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает пару, состоящую из итератора вставленного элемента (или элемента, который предотвратил вставку) и логического значения, равного true, когда вставка имела место 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_map_af0582aa3d8ddda61378c00638a67c862}\label{classcontainers_1_1_map_af0582aa3d8ddda61378c00638a67c862}} 
+\index{containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}!max\_size@{max\_size}}
+\index{max\_size@{max\_size}!containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{max\_size()}{max\_size()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+size\+\_\+type \mbox{\hyperlink{classcontainers_1_1_map}{containers\+::\+Map}}$<$ Key, T, Compare, Alloc $>$\+::max\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Возвращает максимальное количество элементов, которое map может хранить из-\/за ограничений реализации системы или библиотеки \begin{DoxyReturn}{Returns}
+Максимальное количество элементов 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_map_ad02b603e2be95263ea6971d4b5a68e31}\label{classcontainers_1_1_map_ad02b603e2be95263ea6971d4b5a68e31}} 
+\index{containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}!merge@{merge}}
+\index{merge@{merge}!containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classcontainers_1_1_map}{containers\+::\+Map}}$<$ Key, T, Compare, Alloc $>$\+::merge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontainers_1_1_map}{Map}}$<$ Key, T, Compare, Alloc $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Соединение контейнеров map 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em other} & совместимый c map другой контейнер для слияния \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcontainers_1_1_map_ac77d2ae3a603df1af937b5ceaa444249}\label{classcontainers_1_1_map_ac77d2ae3a603df1af937b5ceaa444249}} 
+\index{containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_map}{Map}}\& \mbox{\hyperlink{classcontainers_1_1_map}{containers\+::\+Map}}$<$ Key, T, Compare, Alloc $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcontainers_1_1_map}{Map}}$<$ Key, T, Compare, Alloc $>$ \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Оператор присваивания -\/ перемещения. Заменяет содержимое контейнера на содержимое другого контейнера, используя семантику перемещения
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & контейнер map для использования в качестве источника данных \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$this 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_map_a008533493d3cce91b70d1a3b0d92a260}\label{classcontainers_1_1_map_a008533493d3cce91b70d1a3b0d92a260}} 
+\index{containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_map}{Map}}\& \mbox{\hyperlink{classcontainers_1_1_map}{containers\+::\+Map}}$<$ Key, T, Compare, Alloc $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontainers_1_1_map}{Map}}$<$ Key, T, Compare, Alloc $>$ \&\&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Оператор присваивания -\/ копирования. Заменяет содержимое контейнера map копией содержимого другого контейнера
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & контейнера для использования в качестве источника данных \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$this 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_map_a52fe7d04aa2df18beee53975c38b491e}\label{classcontainers_1_1_map_a52fe7d04aa2df18beee53975c38b491e}} 
+\index{containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}!size@{size}}
+\index{size@{size}!containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+size\+\_\+type \mbox{\hyperlink{classcontainers_1_1_map}{containers\+::\+Map}}$<$ Key, T, Compare, Alloc $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Возвращает количество элементов в map \begin{DoxyReturn}{Returns}
+Количество элементов в контейнере 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_map_a4a0b8e20c59d954d2cc12003ac37ca35}\label{classcontainers_1_1_map_a4a0b8e20c59d954d2cc12003ac37ca35}} 
+\index{containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}!swap@{swap}}
+\index{swap@{swap}!containers::Map$<$ Key, T, Compare, Alloc $>$@{containers::Map$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classcontainers_1_1_map}{containers\+::\+Map}}$<$ Key, T, Compare, Alloc $>$\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontainers_1_1_map}{Map}}$<$ Key, T, Compare, Alloc $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Заменяет содержимое map другим контейнером map 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em other} & map для обмена содержимым \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+map.\+h\end{DoxyCompactItemize}

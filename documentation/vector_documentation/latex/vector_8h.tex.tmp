@@ -1,0 +1,24 @@
+\hypertarget{vector_8h}{}\doxysection{vector.\+h File Reference}
+\label{vector_8h}\index{vector.h@{vector.h}}
+
+
+Заголовочный файл \mbox{\hyperlink{vector_8h}{vector.\+h}} с реализацией контейнера vector.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+Include dependency graph for vector.\+h\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcontainers_1_1_vector}{containers\+::\+Vector$<$ T, Alloc $>$}}
+\item 
+class \mbox{\hyperlink{classcontainers_1_1_common_iterator}{containers\+::\+Common\+Iterator$<$ T, Is\+Const $>$}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Заголовочный файл \mbox{\hyperlink{vector_8h}{vector.\+h}} с реализацией контейнера vector. 
+
+Данный файл содержит в себе определения классов и методов вектора, его итераторов 

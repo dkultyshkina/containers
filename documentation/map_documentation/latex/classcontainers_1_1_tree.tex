@@ -1,0 +1,482 @@
+\hypertarget{classcontainers_1_1_tree}{}\doxysection{containers\+::Tree$<$ Key, T, Compare, Alloc $>$ Class Template Reference}
+\label{classcontainers_1_1_tree}\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+
+
+{\ttfamily \#include $<$rbtree.\+h$>$}
+
+
+
+Inheritance diagram for containers\+::Tree$<$ Key, T, Compare, Alloc $>$\+:
+% FIG 0
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_aabc8c62225a0e231edd72839a297f61d}\label{classcontainers_1_1_tree_aabc8c62225a0e231edd72839a297f61d}} 
+using {\bfseries key\+\_\+type} = Key
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_a1a2738021ba7541c7c1f87641ff850da}\label{classcontainers_1_1_tree_a1a2738021ba7541c7c1f87641ff850da}} 
+using {\bfseries mapped\+\_\+type} = T
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_a39567d03357030d5a8bb0db94762df22}\label{classcontainers_1_1_tree_a39567d03357030d5a8bb0db94762df22}} 
+using {\bfseries value\+\_\+type} = std\+::pair$<$ const Key, T $>$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_a7615530c051e8306ea37310bff0ed731}\label{classcontainers_1_1_tree_a7615530c051e8306ea37310bff0ed731}} 
+using {\bfseries reference} = value\+\_\+type \&
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_a9bc1773f8bf7a0fbc6a303150fab3b0d}\label{classcontainers_1_1_tree_a9bc1773f8bf7a0fbc6a303150fab3b0d}} 
+using {\bfseries const\+\_\+reference} = const value\+\_\+type \&
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_ab5734bcef1f83770e51f403805e65a69}\label{classcontainers_1_1_tree_ab5734bcef1f83770e51f403805e65a69}} 
+using {\bfseries pointer} = value\+\_\+type $\ast$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_ac6f2cc4f8329a43ea16fa5e2ca87b015}\label{classcontainers_1_1_tree_ac6f2cc4f8329a43ea16fa5e2ca87b015}} 
+using {\bfseries const\+\_\+pointer} = const value\+\_\+type $\ast$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_ac2cc3f3ad188cda747061fc0c0be2810}\label{classcontainers_1_1_tree_ac2cc3f3ad188cda747061fc0c0be2810}} 
+using {\bfseries Node\+Alloc} = typename std\+::allocator\+\_\+traits$<$ Alloc $>$\+::template rebind\+\_\+alloc$<$ \mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$ key\+\_\+type, mapped\+\_\+type $>$ $>$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_ac164e6f4521c50a2bbbeaf4517662730}\label{classcontainers_1_1_tree_ac164e6f4521c50a2bbbeaf4517662730}} 
+using {\bfseries Data\+Alloc} = typename std\+::allocator\+\_\+traits$<$ Alloc $>$\+::template rebind\+\_\+alloc$<$ std\+::pair$<$ const Key, T $>$ $>$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_a49a9965bcb46075bbe439fba90168e49}\label{classcontainers_1_1_tree_a49a9965bcb46075bbe439fba90168e49}} 
+using {\bfseries iterator} = \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{Tree\+Common\+Iterator}}$<$ key\+\_\+type, mapped\+\_\+type, false $>$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_ae1b2c1d5b381282edce8afbdb27aa3ad}\label{classcontainers_1_1_tree_ae1b2c1d5b381282edce8afbdb27aa3ad}} 
+using {\bfseries const\+\_\+iterator} = \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{Tree\+Common\+Iterator}}$<$ key\+\_\+type, mapped\+\_\+type, true $>$
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_a3066c183bdd252ce64f581b8a4e0aa4a}\label{classcontainers_1_1_tree_a3066c183bdd252ce64f581b8a4e0aa4a}} 
+using {\bfseries size\+\_\+type} = size\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcontainers_1_1_tree_ab31be9b9afba31f5b5282431640ebaf7}{Tree}} ()
+\item 
+\mbox{\hyperlink{classcontainers_1_1_tree_aced56402d4590efb37e3ebec051c8593}{Tree}} (std\+::initializer\+\_\+list$<$ value\+\_\+type $>$ const \&items)
+\item 
+\mbox{\hyperlink{classcontainers_1_1_tree_aedda5a4be4342da7188c2378b47d6a88}{Tree}} (const \mbox{\hyperlink{classcontainers_1_1_tree}{Tree}} \&m)
+\item 
+\mbox{\hyperlink{classcontainers_1_1_tree_a5954de10448738095416b19ebfc9af6a}{Tree}} (\mbox{\hyperlink{classcontainers_1_1_tree}{Tree}} \&\&m)
+\item 
+\mbox{\hyperlink{classcontainers_1_1_tree}{Tree}} \& \mbox{\hyperlink{classcontainers_1_1_tree_a7ba9d8d3fe352fed404d0f84c89e00a9}{operator=}} (const \mbox{\hyperlink{classcontainers_1_1_tree}{Tree}} \&m)
+\item 
+\mbox{\hyperlink{classcontainers_1_1_tree}{Tree}} \& \mbox{\hyperlink{classcontainers_1_1_tree_a46645972a37086eb4fd6782b1a5a1f8a}{operator=}} (\mbox{\hyperlink{classcontainers_1_1_tree}{Tree}} \&\&m)
+\item 
+\mbox{\hyperlink{classcontainers_1_1_tree_a05932a134672ea08f2adcc9a8ddcdec1}{$\sim$\+Tree}} ()
+\item 
+\mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$ key\+\_\+type, mapped\+\_\+type $>$ $\ast$ \mbox{\hyperlink{classcontainers_1_1_tree_a7f11c0262ffe151b6b51d0fafe6cad39}{Get\+Root}} () const noexcept
+\item 
+\mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$ key\+\_\+type, mapped\+\_\+type $>$ $\ast$ \mbox{\hyperlink{classcontainers_1_1_tree_ab5668449441a6c2c798557fee7f3e7df}{Get\+Max}} () const noexcept
+\item 
+\mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$ key\+\_\+type, mapped\+\_\+type $>$ $\ast$ \mbox{\hyperlink{classcontainers_1_1_tree_a5e8820aa9defafc17dc72cccb676da33}{Get\+Min}} () const noexcept
+\item 
+\mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$ key\+\_\+type, mapped\+\_\+type $>$ $\ast$ \mbox{\hyperlink{classcontainers_1_1_tree_a89ee9d8dc885dd6bf75a08beeb4683db}{Get\+Fake\+Node}} () const noexcept
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_aa30fcdc933a90b9cfb3f6236498cbd6e}\label{classcontainers_1_1_tree_aa30fcdc933a90b9cfb3f6236498cbd6e}} 
+mapped\+\_\+type \& {\bfseries at} (const key\+\_\+type \&key) const
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_a0bd608b95573f3b425c874fae49c58f5}\label{classcontainers_1_1_tree_a0bd608b95573f3b425c874fae49c58f5}} 
+mapped\+\_\+type \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (const key\+\_\+type \&key)
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_aaf641da197a2497e6a31688c6934c54e}\label{classcontainers_1_1_tree_aaf641da197a2497e6a31688c6934c54e}} 
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{iterator}} {\bfseries begin} () noexcept
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_a2d982e1d5018afbd4ef79b350705935c}\label{classcontainers_1_1_tree_a2d982e1d5018afbd4ef79b350705935c}} 
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{iterator}} {\bfseries end} () noexcept
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_ab4cbcffda31c8c8c5e997d72662a3def}\label{classcontainers_1_1_tree_ab4cbcffda31c8c8c5e997d72662a3def}} 
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{const\+\_\+iterator}} {\bfseries cbegin} () const noexcept
+\item 
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classcontainers_1_1_tree_a9b645ef153ffdeef1c9aa7c7ac83db9c}{cend}} () const noexcept
+\item 
+bool \mbox{\hyperlink{classcontainers_1_1_tree_a69c663cd557ff86d68853cbd9d45135c}{empty}} () const noexcept
+\item 
+size\+\_\+type \mbox{\hyperlink{classcontainers_1_1_tree_a215bca1dd5c496dcb2adcebf23c6f202}{size}} () const noexcept
+\item 
+size\+\_\+type \mbox{\hyperlink{classcontainers_1_1_tree_a1c01e5b96ef9607fc691cbe4d7aa3d27}{max\+\_\+size}} () const noexcept
+\item 
+void \mbox{\hyperlink{classcontainers_1_1_tree_a3bc9eeada0cb9c9ab63bf73f8009b68f}{clear}} ()
+\item 
+std\+::pair$<$ \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{iterator}}, bool $>$ \mbox{\hyperlink{classcontainers_1_1_tree_a7b8e67684c1e518a8809d0fda330c350}{insert}} (const value\+\_\+type \&value)
+\item 
+std\+::pair$<$ \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{iterator}}, bool $>$ \mbox{\hyperlink{classcontainers_1_1_tree_ac6210b174ca27261776b5dbecd26b3fa}{insert}} (const key\+\_\+type \&key, const mapped\+\_\+type \&obj)
+\item 
+std\+::pair$<$ \mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{iterator}}, bool $>$ \mbox{\hyperlink{classcontainers_1_1_tree_a38ccbceec9c85a11b1521418747e38a2}{insert\+\_\+or\+\_\+assign}} (const key\+\_\+type \&key, const mapped\+\_\+type \&obj)
+\item 
+void \mbox{\hyperlink{classcontainers_1_1_tree_a2a55d69ee8acb93eb31c33d3db8ba1a6}{erase}} (\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{iterator}} pos)
+\item 
+void \mbox{\hyperlink{classcontainers_1_1_tree_a244c76e674bf896c3ff0668408da3856}{swap}} (\mbox{\hyperlink{classcontainers_1_1_tree}{Tree}} \&other)
+\item 
+void \mbox{\hyperlink{classcontainers_1_1_tree_a9e0f42b68e4141dadf26dfd1b0168cd0}{merge}} (\mbox{\hyperlink{classcontainers_1_1_tree}{Tree}} \&other)
+\item 
+bool \mbox{\hyperlink{classcontainers_1_1_tree_a4cfd739ee2d0d24aed2b6baed17512be}{contains}} (const Key \&key) const
+\item 
+void \mbox{\hyperlink{classcontainers_1_1_tree_a316287539b99323e128e7b786534851b}{Copy\+Elements\+For\+Tree}} (const \mbox{\hyperlink{classcontainers_1_1_tree}{Tree}} \&m)
+\item 
+void \mbox{\hyperlink{classcontainers_1_1_tree_a0b5ea7fa45862419d0afa02885724b2e}{Move\+Tree}} (\mbox{\hyperlink{classcontainers_1_1_tree}{Tree}} \&\&m)
+\item 
+\mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$ key\+\_\+type, mapped\+\_\+type $>$ $\ast$ \mbox{\hyperlink{classcontainers_1_1_tree_a001d71f6063c8b4e639c5e8161ec48f9}{Min\+Node}} (\mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$ key\+\_\+type, mapped\+\_\+type $>$ $\ast$ptr) const
+\item 
+\mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$ key\+\_\+type, mapped\+\_\+type $>$ $\ast$ \mbox{\hyperlink{classcontainers_1_1_tree_a96042288b9023d86f9f79982d579455f}{Max\+Node}} (\mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$ key\+\_\+type, mapped\+\_\+type $>$ $\ast$ptr) const
+\item 
+bool \mbox{\hyperlink{classcontainers_1_1_tree_ae8fc6c5d96c859bcfc3722ce173ef352}{Check\+Fake\+Node}} (\mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$ key\+\_\+type, mapped\+\_\+type $>$ $\ast$ptr) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcontainers_1_1_tree_ae85844ea5eac0c597696327c48fd107a}\label{classcontainers_1_1_tree_ae85844ea5eac0c597696327c48fd107a}} 
+class {\bfseries Node$<$ Key, T $>$}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Key, typename T, typename Compare = std\+::less$<$\+Key$>$, typename Alloc = std\+::allocator$<$\+T$>$$>$\newline
+class containers\+::\+Tree$<$ Key, T, Compare, Alloc $>$}
+
+Определение шаблоного класса дерева. Первый параметр -\/ тип ключа, второй -\/ тип данных, третий -\/ compare (cравнивает значение строкового объекта), четвертый параметр -\/ Allocator по умолчанию, который используется всеми контейнерами стандартной библиотеки, если не указан пользовательский Allocator 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcontainers_1_1_tree_ab31be9b9afba31f5b5282431640ebaf7}\label{classcontainers_1_1_tree_ab31be9b9afba31f5b5282431640ebaf7}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!Tree@{Tree}}
+\index{Tree@{Tree}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::\mbox{\hyperlink{classcontainers_1_1_tree}{Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Конструктор по умолчанию, создает пустое дерево \mbox{\Hypertarget{classcontainers_1_1_tree_aced56402d4590efb37e3ebec051c8593}\label{classcontainers_1_1_tree_aced56402d4590efb37e3ebec051c8593}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!Tree@{Tree}}
+\index{Tree@{Tree}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::\mbox{\hyperlink{classcontainers_1_1_tree}{Tree}} (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ value\+\_\+type $>$ const \&}]{items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Конструктор списка инициализаторов. Создает дерево, инициализированное с использованием std\+::initializer\+\_\+list 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em items} & Список для инициализации дерева \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcontainers_1_1_tree_aedda5a4be4342da7188c2378b47d6a88}\label{classcontainers_1_1_tree_aedda5a4be4342da7188c2378b47d6a88}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!Tree@{Tree}}
+\index{Tree@{Tree}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::\mbox{\hyperlink{classcontainers_1_1_tree}{Tree}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcontainers_1_1_tree}{Tree}}$<$ Key, T, Compare, Alloc $>$ \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Конструктор копирования 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & дерево для использования в качестве источника данных для копирования \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a5954de10448738095416b19ebfc9af6a}\label{classcontainers_1_1_tree_a5954de10448738095416b19ebfc9af6a}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!Tree@{Tree}}
+\index{Tree@{Tree}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::\mbox{\hyperlink{classcontainers_1_1_tree}{Tree}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontainers_1_1_tree}{Tree}}$<$ Key, T, Compare, Alloc $>$ \&\&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Конструктор перемещения 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & дерево для использования в качестве источника данных для перемещения \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a05932a134672ea08f2adcc9a8ddcdec1}\label{classcontainers_1_1_tree_a05932a134672ea08f2adcc9a8ddcdec1}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!````~Tree@{$\sim$Tree}}
+\index{````~Tree@{$\sim$Tree}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Tree()}{~Tree()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::$\sim$\mbox{\hyperlink{classcontainers_1_1_tree}{Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Деструктор 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a9b645ef153ffdeef1c9aa7c7ac83db9c}\label{classcontainers_1_1_tree_a9b645ef153ffdeef1c9aa7c7ac83db9c}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!cend@{cend}}
+\index{cend@{cend}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{cend()}{cend()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::cend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Возвращает сonst-\/итератор конца дерева \begin{DoxyReturn}{Returns}
+Const-\/итератор конца вектора 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_ae8fc6c5d96c859bcfc3722ce173ef352}\label{classcontainers_1_1_tree_ae8fc6c5d96c859bcfc3722ce173ef352}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!CheckFakeNode@{CheckFakeNode}}
+\index{CheckFakeNode@{CheckFakeNode}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{CheckFakeNode()}{CheckFakeNode()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+bool \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::Check\+Fake\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$ key\+\_\+type, mapped\+\_\+type $>$ $\ast$}]{ptr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Проверка элемента узла на fake node 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em ptr} & указатель на узел дерева \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+результат проверки на fake node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a3bc9eeada0cb9c9ab63bf73f8009b68f}\label{classcontainers_1_1_tree_a3bc9eeada0cb9c9ab63bf73f8009b68f}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!clear@{clear}}
+\index{clear@{clear}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Удаление всех элементов из дерева \mbox{\Hypertarget{classcontainers_1_1_tree_a4cfd739ee2d0d24aed2b6baed17512be}\label{classcontainers_1_1_tree_a4cfd739ee2d0d24aed2b6baed17512be}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!contains@{contains}}
+\index{contains@{contains}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+bool \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::contains (\begin{DoxyParamCaption}\item[{const Key \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Проверяет, есть ли в дереве элемент с ключом, эквивалентный требуемому 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em key} & -\/ значение ключа \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+существует или нет элемент с требуемым ключом в контейнере 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a316287539b99323e128e7b786534851b}\label{classcontainers_1_1_tree_a316287539b99323e128e7b786534851b}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!CopyElementsForTree@{CopyElementsForTree}}
+\index{CopyElementsForTree@{CopyElementsForTree}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{CopyElementsForTree()}{CopyElementsForTree()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::Copy\+Elements\+For\+Tree (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcontainers_1_1_tree}{Tree}}$<$ Key, T, Compare, Alloc $>$ \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Копирование из одного дерева в другой 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & дерево для использования в качестве источника данных для копирования \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a69c663cd557ff86d68853cbd9d45135c}\label{classcontainers_1_1_tree_a69c663cd557ff86d68853cbd9d45135c}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!empty@{empty}}
+\index{empty@{empty}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+bool \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Проверяет есть ли в дереве элементы \begin{DoxyReturn}{Returns}
+Пуст или не пуст контейнер 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a2a55d69ee8acb93eb31c33d3db8ba1a6}\label{classcontainers_1_1_tree_a2a55d69ee8acb93eb31c33d3db8ba1a6}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!erase@{erase}}
+\index{erase@{erase}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{iterator}}}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Удаляет указанный элемент из дерева 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pos} & итератор элемента, который нужно удалить \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a89ee9d8dc885dd6bf75a08beeb4683db}\label{classcontainers_1_1_tree_a89ee9d8dc885dd6bf75a08beeb4683db}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!GetFakeNode@{GetFakeNode}}
+\index{GetFakeNode@{GetFakeNode}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{GetFakeNode()}{GetFakeNode()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$key\+\_\+type, mapped\+\_\+type$>$$\ast$ \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::Get\+Fake\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Метод accessor для получения fake node \begin{DoxyReturn}{Returns}
+fake node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_ab5668449441a6c2c798557fee7f3e7df}\label{classcontainers_1_1_tree_ab5668449441a6c2c798557fee7f3e7df}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!GetMax@{GetMax}}
+\index{GetMax@{GetMax}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{GetMax()}{GetMax()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$key\+\_\+type, mapped\+\_\+type$>$$\ast$ \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::Get\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Метод accessor для получения максимального элемента дерева \begin{DoxyReturn}{Returns}
+максимальный элемент дерева 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a5e8820aa9defafc17dc72cccb676da33}\label{classcontainers_1_1_tree_a5e8820aa9defafc17dc72cccb676da33}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!GetMin@{GetMin}}
+\index{GetMin@{GetMin}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{GetMin()}{GetMin()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$key\+\_\+type, mapped\+\_\+type$>$$\ast$ \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::Get\+Min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Метод accessor для получения минимального элемента дерева \begin{DoxyReturn}{Returns}
+минимальный элемент дерева 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a7f11c0262ffe151b6b51d0fafe6cad39}\label{classcontainers_1_1_tree_a7f11c0262ffe151b6b51d0fafe6cad39}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!GetRoot@{GetRoot}}
+\index{GetRoot@{GetRoot}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{GetRoot()}{GetRoot()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$key\+\_\+type, mapped\+\_\+type$>$$\ast$ \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::Get\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Метод accessor для получения корня дерева \begin{DoxyReturn}{Returns}
+корень дерева 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_ac6210b174ca27261776b5dbecd26b3fa}\label{classcontainers_1_1_tree_ac6210b174ca27261776b5dbecd26b3fa}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!insert@{insert}}
+\index{insert@{insert}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+std\+::pair$<$\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{iterator}}, bool$>$ \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::insert (\begin{DoxyParamCaption}\item[{const key\+\_\+type \&}]{key,  }\item[{const mapped\+\_\+type \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Осущесталяет вставку элемента в дерево 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em key} & значение ключа для вставки \\
+\hline
+\mbox{\texttt{ in}}  & {\em obj} & значение элемента для вставки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает пару, состоящую из итератора вставленного элемента (или элемента, который предотвратил вставку) и логического значения, равного true, когда вставка имела место 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a7b8e67684c1e518a8809d0fda330c350}\label{classcontainers_1_1_tree_a7b8e67684c1e518a8809d0fda330c350}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!insert@{insert}}
+\index{insert@{insert}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+std\+::pair$<$\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{iterator}}, bool$>$ \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::insert (\begin{DoxyParamCaption}\item[{const value\+\_\+type \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Осущесталяет вставку элемента в дерево 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em value} & значение элемента для вставки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает пару, состоящую из итератора вставленного элемента (или элемента, который предотвратил вставку) и логического значения, равного true, когда вставка имела место 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a38ccbceec9c85a11b1521418747e38a2}\label{classcontainers_1_1_tree_a38ccbceec9c85a11b1521418747e38a2}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!insert\_or\_assign@{insert\_or\_assign}}
+\index{insert\_or\_assign@{insert\_or\_assign}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{insert\_or\_assign()}{insert\_or\_assign()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+std\+::pair$<$\mbox{\hyperlink{classcontainers_1_1_tree_common_iterator}{iterator}}, bool$>$ \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::insert\+\_\+or\+\_\+assign (\begin{DoxyParamCaption}\item[{const key\+\_\+type \&}]{key,  }\item[{const mapped\+\_\+type \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Если ключ не существует в дереве, вставляет новое значение, если нет, то находит существующий элемент
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em key} & значение ключа для вставки \\
+\hline
+\mbox{\texttt{ in}}  & {\em obj} & значение элемента для вставки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает пару, состоящую из итератора вставленного элемента (или элемента, который предотвратил вставку) и логического значения, равного true, когда вставка имела место 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a1c01e5b96ef9607fc691cbe4d7aa3d27}\label{classcontainers_1_1_tree_a1c01e5b96ef9607fc691cbe4d7aa3d27}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!max\_size@{max\_size}}
+\index{max\_size@{max\_size}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{max\_size()}{max\_size()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+size\+\_\+type \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::max\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Возвращает максимальное количество элементов, которое дерево может хранить из-\/за ограничений реализации системы или библиотеки \begin{DoxyReturn}{Returns}
+Максимальное количество элементов 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a96042288b9023d86f9f79982d579455f}\label{classcontainers_1_1_tree_a96042288b9023d86f9f79982d579455f}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!MaxNode@{MaxNode}}
+\index{MaxNode@{MaxNode}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{MaxNode()}{MaxNode()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$key\+\_\+type, mapped\+\_\+type$>$$\ast$ \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::Max\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$ key\+\_\+type, mapped\+\_\+type $>$ $\ast$}]{ptr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Нахождение максимального элемента в дереве 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em ptr} & указатель на узел дерева \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+указатель на узел дерева 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a9e0f42b68e4141dadf26dfd1b0168cd0}\label{classcontainers_1_1_tree_a9e0f42b68e4141dadf26dfd1b0168cd0}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!merge@{merge}}
+\index{merge@{merge}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::merge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontainers_1_1_tree}{Tree}}$<$ Key, T, Compare, Alloc $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Соединение деревьев 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em other} & совместимое для дерева другое дерево для слияния \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a001d71f6063c8b4e639c5e8161ec48f9}\label{classcontainers_1_1_tree_a001d71f6063c8b4e639c5e8161ec48f9}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!MinNode@{MinNode}}
+\index{MinNode@{MinNode}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{MinNode()}{MinNode()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$key\+\_\+type, mapped\+\_\+type$>$$\ast$ \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::Min\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontainers_1_1_node}{Node}}$<$ key\+\_\+type, mapped\+\_\+type $>$ $\ast$}]{ptr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Нахождение минимального элемента в дереве 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em ptr} & указатель на элемент дерева \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+указатель на элемент дерева 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a0b5ea7fa45862419d0afa02885724b2e}\label{classcontainers_1_1_tree_a0b5ea7fa45862419d0afa02885724b2e}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!MoveTree@{MoveTree}}
+\index{MoveTree@{MoveTree}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{MoveTree()}{MoveTree()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::Move\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontainers_1_1_tree}{Tree}}$<$ Key, T, Compare, Alloc $>$ \&\&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перемещение из одного дерева в другой 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & дерево для использования в качестве источника данных для перемещения \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a7ba9d8d3fe352fed404d0f84c89e00a9}\label{classcontainers_1_1_tree_a7ba9d8d3fe352fed404d0f84c89e00a9}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_tree}{Tree}}\& \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcontainers_1_1_tree}{Tree}}$<$ Key, T, Compare, Alloc $>$ \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Оператор присваивания -\/ копирования. Заменяет содержимое дерево копией содержимого другого дерева
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & дерево для использования в качестве источника данных \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$this 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a46645972a37086eb4fd6782b1a5a1f8a}\label{classcontainers_1_1_tree_a46645972a37086eb4fd6782b1a5a1f8a}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classcontainers_1_1_tree}{Tree}}\& \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontainers_1_1_tree}{Tree}}$<$ Key, T, Compare, Alloc $>$ \&\&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Оператор присваивания -\/ перемещения. Заменяет содержимое дерево на содержимое другого дерева, используя семантику перемещения
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & дерево для использования в качестве источника данных \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$this 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a215bca1dd5c496dcb2adcebf23c6f202}\label{classcontainers_1_1_tree_a215bca1dd5c496dcb2adcebf23c6f202}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!size@{size}}
+\index{size@{size}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+size\+\_\+type \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Возвращает количество элементов в дереве \begin{DoxyReturn}{Returns}
+Количество элементов в контейнере 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcontainers_1_1_tree_a244c76e674bf896c3ff0668408da3856}\label{classcontainers_1_1_tree_a244c76e674bf896c3ff0668408da3856}} 
+\index{containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}!swap@{swap}}
+\index{swap@{swap}!containers::Tree$<$ Key, T, Compare, Alloc $>$@{containers::Tree$<$ Key, T, Compare, Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily template$<$typename Key , typename T , typename Compare  = std\+::less$<$\+Key$>$, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classcontainers_1_1_tree}{containers\+::\+Tree}}$<$ Key, T, Compare, Alloc $>$\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontainers_1_1_tree}{Tree}}$<$ Key, T, Compare, Alloc $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Заменяет содержимое дерева другим 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em other} & дерево для обмена содержимым \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rbtree_8h}{rbtree.\+h}}\end{DoxyCompactItemize}
